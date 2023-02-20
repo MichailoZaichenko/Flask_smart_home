@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% include 'header.html' %}
+    <main>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-2 text-center">
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Temperature</h1>
+                <ul>
+                <li><p>current {{ temperature }}°C</p></li>
+                <li><p>average</p><ul>
+                </ul>
+            </div>
+
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Humidity</h1>
+                <li><p>current {{ humidity }}%</p></li>
+            </div>
+
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Counter</h1>
+                <li><p>electricity {{ electricity }}Кв</p></li>
+                <li><p>gas {{ gas }}м3</p></li>
+                <li><p>water {{ water }}л.</p></li>
+            </div>
+
+            <div class="bg-light p-5 rounded mt-3">
+                <h1>Boiler</h1>
+                <li><p>Isturn_on {{ IsRun }}</p></li>
+                <li><p>temperature {{ boiler_temp }}°C</p></li>
+                <li><p>pressure {{ boiler_pres }}Па</p></li>
+            </div>
+
+        </div>
+    </main>
+    {% include 'footer.html' %}
+{% endblock %}
