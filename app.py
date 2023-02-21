@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home(): 
-    with open("exemple.json", "r") as file:
+    with open("example.json", "r") as file:
         data = json.load(file)
     return render_template("index.html", head1="head", title = "Smart home", temperature = data['temperature'], humidity = data["humidity"], electricity = data["meter"]["electricity"]["consumption"], gas = data["meter"]["gas"]["consumption"], water = data["meter"]["water"]["consumption"], boiler_temp = data['boiler']["temperature"], boiler_pres = data['boiler']["pressure"], IsRun = data['boiler']['isRun'])
 
